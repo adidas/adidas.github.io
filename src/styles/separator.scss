@@ -1,0 +1,29 @@
+@import 'vars';
+
+.separator {
+  position: absolute;
+  top: -.5em;
+  height: 1em;
+  width: 30%;
+  background-color: $blue-100;
+
+  &.separator--left {
+    left: 10%;
+    right: auto;
+
+    @media (min-width: $max-width) {
+      width: 10%;
+      left: 35%;
+    }
+  }
+
+  &.separator--right {
+    left: auto;
+    right: 10%;
+
+    @media (min-width: $max-width) {
+      width: 10%;
+      right: 35%;
+    }
+  }
+}

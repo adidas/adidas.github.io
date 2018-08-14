@@ -1,0 +1,20 @@
+dist: trusty
+language: node_js
+node_js:
+- "8"
+
+install:
+- npm install
+
+script:
+- npm run lint
+- npm run test
+- npm run build
+
+deploy:
+  provider: pages
+  local-dir: ./dist
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: develop

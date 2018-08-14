@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "adidas-env/module",
+    "adidas-env/node",
+    "adidas-env/browser",
+    "adidas-es7",
+    "adidas-babel",
+    "adidas-vue"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "rules": {
+    "require-jsdoc": "off",
+    "prefer-destructuring": "off"
+  }
+}

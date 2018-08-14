@@ -1,0 +1,58 @@
+@import 'vars';
+@import 'animations';
+@import 'grid';
+@import 'separator';
+@import 'document';
+
+.layout, .page, #__nuxt, #__layout {
+  height: inherit;
+  min-width: $min-width;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  background-color: #000;
+  background-position-x: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @media (max-width: $screen-xs) {
+    background-image: url(/img/background-480x359.jpg);
+  }
+
+  @media (min-width: $screen-xs) {
+    background-image: url(/img/background-980x734.jpg);
+  }
+
+  @media (min-width: $screen-md) {
+    background-image: url(/img/background-1280x958.jpg);
+  }
+
+  @media (min-width: $screen-lg) {
+    background-image: url(/img/background-3840x2875.jpg);
+  }
+}
+
+.nuxt-progress {
+  background-color: $dark-blue-80 !important;
+  height: .25em !important;
+}
+
+.yarn {
+  h5, h6 {
+    font-weight: normal;
+  }
+
+  .main {
+    display: block;
+    overflow-y: auto;
+
+    .container {
+      background-color: initial;
+    }
+  }
+}

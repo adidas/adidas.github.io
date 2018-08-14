@@ -1,0 +1,20 @@
+@import 'vars';
+@import 'mixins';
+
+.document {
+  background-color: $primary-white;
+  text-align: justify;
+  padding: 5em 0;
+  min-height: calc(100% - #{$footer-height});
+
+  @include md-screen-padding();
+  @include lg-screen-padding();
+
+  @media (max-width: $screen-md) {
+    padding: 5em;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 2.5em;
+  }
+}

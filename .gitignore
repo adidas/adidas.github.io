@@ -1,0 +1,9 @@
+*.code-*
+**/sw.js
+.npmrc
+.nuxt
+.DS_Store
+.env
+dist
+test/results
+node_modules

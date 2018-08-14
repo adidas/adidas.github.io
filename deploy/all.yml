@@ -1,0 +1,85 @@
+kind: Deployment
+apiVersion: apps/v1beta1
+metadata:
+  name: adidas-github-io
+  namespace: $NAMESPACE
+spec:
+  template:
+    metadata:
+      labels:
+        app: adidas-github-io
+    spec:
+      containers:
+      - name: adidas-github-io
+        image: tools.adidas-group.com:5000/pabb/adidas-github-io:$TAG
+        imagePullPolicy: Always
+        env:
+        - name: BUILD_DATE
+          value: '$LAST_BUILD_DATE'
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 250m
+          limits:
+            cpu: 750m
+      imagePullSecrets:
+      - name: tools.adidas-group.com
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: adidas-github-io
+  namespace: $NAMESPACE
+spec:
+  selector:
+    app: adidas-github-io
+  ports:
+    - name: http
+      port: 80
+  type: LoadBalancer
+---
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v1
+metadata:
+  name: adidas-github-io
+  namespace: $NAMESPACE
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    apiVersion: apps/v1beta1
+    name: adidas-github-io
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 60
+---
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  labels:
+    app: adidas-github-io
+  name: adidas-github-io
+  namespace: $NAMESPACE
+spec:
+  rules:
+  - host: adidas-github-io.dev-blue.he.k8s.emea.adsint.biz
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: adidas-github-io
+          servicePort: 80
+  - host: adidas-github-io.prod-blue.he.k8s.emea.adsint.biz
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: adidas-github-io
+          servicePort: 80
+  - host: $DNS
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: adidas-github-io
+          servicePort: 80

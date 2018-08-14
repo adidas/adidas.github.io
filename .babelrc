@@ -1,0 +1,6 @@
+{
+  "presets": [
+    [ "vue-app", { "useBuildIns": true }],
+    [ "env", { "targets": { "browsers": [ "ie 10" ] } }]
+  ]
+}

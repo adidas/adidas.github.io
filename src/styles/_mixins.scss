@@ -1,0 +1,26 @@
+@import 'vars';
+
+@mixin md-screen-padding() {
+  @media (max-width: $max-width) {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin lg-screen-padding($content-width: $screen-lg) {
+  @media (min-width: $max-width) {
+    padding-left: calc((100% - #{$content-width}) / 2);
+    padding-right: calc((100% - #{$content-width}) / 2);
+  }
+}
+
+@mixin center-vertically {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
