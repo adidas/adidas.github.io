@@ -25,7 +25,14 @@ export function getGitHubRepositories() {
             ...node,
             config: load(node.config ? node.config.text : null)
           }))
-          .filter(({ config }) => config));
+          .filter(({ config }) => config))
+          .map((info) => {
+            if (!info.config.imageUrl) {
+              info.config.imageUrl = '/img/source.jpg';
+            }
+
+            return info;
+          });
         } else {
           obs$.unsubscribe();
           resolve(values);

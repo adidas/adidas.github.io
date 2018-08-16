@@ -9,21 +9,17 @@ Website to display adidas Open Source projects.
 A repository must comply with the following:
 
 1. Belongs to https://github.com/adidas
-1. `.meta.yml` file exists and is compliant with the rules below
+1. `.meta.yml` file exists
 
 ### .meta.yml definition
 
-| Key | Required | Defaults | Description |
-| --- | --- | --- | --- |
-| `imageUrl` | Yes | N/A | A representative image of the project |
-| `backgroundColor` | No | N/A | Background color for the card |
-| `display.description` | No | `""` | Overrides the repository description from GitHub |
-| `display.forks` | No | `false` | Whether to show the total count of forks |
-| `display.language` | No | `false` | Whether to show the main language of the project |
-| `display.stars` | No | `false` | Whether to show the total count of stars |
-| `display.title` | No | `""` | Overrides the repository name from GitHub |
-| `display.watchers` | No | `false` | Whether to show the total count of watchers |
-| `keywords` | No | `[]` | A list of keywords to search for this repo |
+| Key | Defaults | Description |
+| --- | --- | --- |
+| `imageUrl` | `'/img/source.jpg'` | A representative image of the project |
+| `backgroundColor` | N/A | Background color for the card |
+| `display.name` | `""` | Overrides the repository name from GitHub |
+| `display.description` | `""` | Overrides the repository description from GitHub |
+| `keywords` | `[]` | A list of keywords to search for this repo |
 
 ## Show a PROJECT in adidas GitHub Portal
 

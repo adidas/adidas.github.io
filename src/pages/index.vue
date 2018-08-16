@@ -41,7 +41,7 @@
             :href="item.url"
             target="_blank"
             rel="nofollow noreferrer noopener">
-          <card :title="item.name"
+          <card :title="(item.config && item.config.display && item.config.display.name) || item.name"
               :image="item.config.imageUrl"
               :background-color="item.config.backgroundColor"
               :type="item.type">
