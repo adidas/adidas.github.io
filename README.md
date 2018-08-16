@@ -71,9 +71,10 @@ Runs `eslint` to check that all the source JS and Vue files are compliant.
 git checkout develop
 npm install
 npm run build
-git add -f ./dist/*
+git add -f ./dist
 git commit -m "UPDATE gh-pages"
-git subtree push --prefix dist origin gh-pages -f
+git subtree split --prefix dist -b gh-pages
+git push -f origin gh-pages:master
 ```
 
 ## Dockerize
