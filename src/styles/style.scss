@@ -50,6 +50,7 @@ body {
   .main {
     display: block;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     .container {
       background-color: initial;

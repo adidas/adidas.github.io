@@ -30,7 +30,7 @@
     @include lg-screen-padding();
 
     @media (max-width: $screen-md) {
-      background-color: rgba($primary-black, .75);
+      background: rgba($primary-black, .75);
       padding-top: 0;
       padding-bottom: 0;
       position: relative;
@@ -137,34 +137,6 @@
 
         @media (max-width: $breakpoint-2-col) {
           height: $grid-item-size;
-        }
-      }
-
-      .grid-item {
-        &.contribute {
-          background-color: $primary-black;
-          text-align: center;
-          padding: 0;
-
-          @supports (grid-template-rows: 1px) {
-            width: 100%;
-          }
-
-          .tile {
-            height: 100%;
-            width: 100%;
-
-            h5 {
-              margin-top: 2.5em;
-            }
-
-            .btn {
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              left: 0;
-            }
-          }
         }
       }
     }

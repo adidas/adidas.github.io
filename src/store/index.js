@@ -1,4 +1,4 @@
-import { SET_LANG, TOGGLE_SIDEBAR } from './mutation-types';
+import { SET_LANG, TOGGLE_SIDEBAR, HIDE_SIDEBAR } from './mutation-types';
 
 export const state = () => ({
   locales: [ 'en', 'es', 'de' ],
@@ -15,6 +15,10 @@ export const getters = {
 export const actions = {
   toggleSidebar({ commit }) {
     commit(TOGGLE_SIDEBAR);
+  },
+
+  hideSidebar({ commit }) {
+    commit(HIDE_SIDEBAR);
   }
 };
 
@@ -27,5 +31,9 @@ export const mutations = {
 
   [TOGGLE_SIDEBAR](state) {
     state.sidebar = !state.sidebar;
+  },
+
+  [HIDE_SIDEBAR](state) {
+    state.sidebar = false;
   }
 };

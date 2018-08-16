@@ -48,6 +48,11 @@ module.exports = {
     linkExactActiveClass: 'active',
     scrollBehavior: () => ({ x: 0, y: 0 })
   },
+  manifest: {
+    name: 'adidas developer portal',
+    short_name: 'developer portal',
+    description: 'All you need to know to create.'
+  },
   generate: {
     minify: {
       collapseWhitespace: true,

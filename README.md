@@ -16,6 +16,7 @@ A repository must comply with the following:
 | Key | Required | Defaults | Description |
 | --- | --- | --- | --- |
 | `imageUrl` | Yes | N/A | A representative image of the project |
+| `backgroundColor` | No | N/A | Background color for the card |
 | `display.description` | No | `""` | Overrides the repository description from GitHub |
 | `display.forks` | No | `false` | Whether to show the total count of forks |
 | `display.language` | No | `false` | Whether to show the main language of the project |
@@ -37,6 +38,7 @@ To show a project in the GitHub portal, go to adidas GitHub portal CMS.
 | `description` | Yes | N/A | A brief description of the project |
 | `url` | Yes | N/A | The link to the public website of the project |
 | `config.imageUrl` | Yes | N/A | A representative image of the project |
+| `config.backgroundColor` | No | N/A | Background color for the card |
 | `config.keywords` | No | `[]` | A list of keywords to search for this project |
 
 # Development
