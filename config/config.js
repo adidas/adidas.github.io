@@ -10,7 +10,7 @@ const contributingPages = {
   'terms-and-conditions': {
     id: 'terms-and-conditions',
     name: 'contributing-document',
-    path: '/terms-and-conditions',
+    path: '/contributing/terms-and-conditions',
     file: 'Terms-and-conditions.md'
   },
   'css-coding-guidelines': {

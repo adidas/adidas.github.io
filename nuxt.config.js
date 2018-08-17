@@ -54,6 +54,7 @@ module.exports = {
     description: 'All you need to know to create.'
   },
   generate: {
+    routes: config.contributing.routes.map(({ path }) => path),
     minify: {
       collapseWhitespace: true,
       conservativeCollapse: true
