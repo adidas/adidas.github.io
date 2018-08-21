@@ -47,7 +47,7 @@
           </a>
         </header>
         <a class="link link--dark"
-            href="mailto:software.engineering@adidas.com"
+            href="mailto:opensourcesoftware@adidas.com"
             rel="nofollow noreferrer noopener">
           {{ $t('footer.links.contact') }}
         </a>
