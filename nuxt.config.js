@@ -28,7 +28,6 @@ module.exports = {
     }
   },
   css: [
-    './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
     './node_modules/branding-resources/fonts/adihaus-din.css',
     './node_modules/branding-resources/fonts/adihaus-din-cond.css',
@@ -40,7 +39,6 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/fetch.js',
-    '~/plugins/bootstrap.js',
     '~/plugins/global-components.js',
     { src: '~/plugins/lazyload.js', ssr: false }
   ],

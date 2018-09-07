@@ -10,7 +10,6 @@ module.exports = {
     'isomorphic-fetch',
     'showdown',
     'jquery',
-    'bootstrap',
     '@fortawesome/fontawesome-free',
     'rxjs',
     'vue-lazyload',

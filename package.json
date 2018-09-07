@@ -24,7 +24,6 @@
     "@fortawesome/fontawesome-free": "5.2.0",
     "@nuxtjs/pwa": "2.0.8",
     "animate.css": "3.6.1",
-    "bootstrap": "3.3.7",
     "branding-resources": "1.9.3",
     "yarn-design-system": "1.0.0",
     "dotenv": "6.0.0",
