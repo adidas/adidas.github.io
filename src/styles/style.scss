@@ -55,6 +55,10 @@ body {
 
     .container {
       background-color: initial;
+
+      .section {
+        border-bottom: none;
+      }
     }
   }
 }
