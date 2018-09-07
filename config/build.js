@@ -1,5 +1,4 @@
 const { join } = require('path');
-const webpack = require('webpack');
 const glob = require('glob-all');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
