@@ -2,6 +2,10 @@
   "name": "adidas-github-io",
   "version": "1.0.1",
   "description": "adidas GitHub portal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adidas/adidas.github.io.git"
+  },
   "license": "MIT",
   "contributors": [
     "David Recuenco <david.recuencogadea@gmail.com>",
@@ -23,11 +27,11 @@
     "serve:static": "http-server ./dist/ -p 3000 -c 31536000 --gzip"
   },
   "dependencies": {
+    "@adidas/yarn-design-system": "1.0.0",
     "@fortawesome/fontawesome-free": "5.2.0",
     "@nuxtjs/pwa": "2.0.8",
     "animate.css": "3.6.1",
     "branding-resources": "1.9.3",
-    "yarn-design-system": "1.0.0",
     "dotenv": "6.0.0",
     "isomorphic-fetch": "2.2.1",
     "js-yaml": "3.11.0",

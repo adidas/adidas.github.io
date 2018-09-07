@@ -113,7 +113,6 @@ export default {
       }
 
       &__header {
-        font-family: $font-family-adihaus-din;
         font-weight: bold;
         display: inline-block;
       }
