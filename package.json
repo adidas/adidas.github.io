@@ -28,7 +28,6 @@
     "yarn-design-system": "1.0.0",
     "dotenv": "6.0.0",
     "isomorphic-fetch": "2.2.1",
-    "jquery": "2.1.4",
     "js-yaml": "3.11.0",
     "nuxt": "1.4.1",
     "nuxt-i18n": "4.1.0",

@@ -9,21 +9,13 @@ module.exports = {
     'babel-polyfill',
     'isomorphic-fetch',
     'showdown',
-    'jquery',
     '@fortawesome/fontawesome-free',
     'rxjs',
     'vue-lazyload',
     'js-yaml'
   ],
   extractCSS: true,
-  plugins: [
-    new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery',
-      'window.jQuery': 'jquery'
-    }),
-    new CompressionWebpackPlugin()
-  ],
+  plugins: [ new CompressionWebpackPlugin() ],
   extend(config, { isDev }) {
     if (!isDev) {
       config.devtool = false;
