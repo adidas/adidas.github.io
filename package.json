@@ -1,11 +1,15 @@
 {
   "name": "adidas-github-io",
-  "version": "1.0.0",
-  "description": "adidas GitHub portal frontend",
+  "version": "1.0.1",
+  "description": "adidas GitHub portal",
   "license": "MIT",
+  "contributors": [
+    "David Recuenco <david.recuencogadea@gmail.com>",
+    "Jaime Pastor <moelders@gmail.com>"
+  ],
+  "homepage": "http://adidas.github.io/",
   "main": "nuxt.config.js",
   "scripts": {
-    "setup": "echo \"nothing to build\"",
     "start": "npm run build:dev",
     "build": "cross-env NODE_ENV=production nuxt generate --spa",
     "build:dev": "nuxt",

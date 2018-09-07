@@ -38,7 +38,6 @@ node {
 
             tools.npm.withNvm {
                 sh 'npm install'
-                sh 'npm run setup'
             }
         }
 
