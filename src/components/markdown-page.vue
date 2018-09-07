@@ -45,7 +45,7 @@ export default {
   .content-wrapper {
     background: $primary-white;
     display: flex;
-    min-height: calc(100% - #{$footer-height});
+    min-height: calc(100% - #{ $footer-height });
 
     @media (min-width: $max-width) {
       display: block;
@@ -59,7 +59,7 @@ export default {
         position: absolute;
         background: transparent;
         border: none;
-        margin-left: calc((100% - #{$max-width}) / 2 - 5em);
+        margin-left: calc((100% - #{ $max-width }) / 2 - 5em);
       }
 
       @media (max-width: $screen-md) {

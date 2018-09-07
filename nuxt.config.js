@@ -29,8 +29,6 @@ module.exports = {
   },
   css: [
     './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
-    './node_modules/branding-resources/fonts/adihaus-din.css',
-    './node_modules/branding-resources/fonts/adineue.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn-logo.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn-icon.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn.css',

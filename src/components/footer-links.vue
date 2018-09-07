@@ -91,7 +91,7 @@ export default {
       }
 
       .link {
-        padding: .25em .5em;
+        padding: $padding-small-vertical $padding-base-horizontal;
       }
 
       .link--careers {

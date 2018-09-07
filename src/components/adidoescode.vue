@@ -9,14 +9,14 @@
   @import '../styles/vars';
   @import '../styles/mixins';
 
-  $logo-height-normal: 200px;
+  $logo-height-normal: 12em;
   $logo-height-large: 10vw;
 
   @mixin compute-line-position($logo-height) {
-    height: calc(#{$logo-height} / 3);
-    width: calc(#{$logo-height} * .75);
-    top: calc(#{$logo-height} / 2 + #{$logo-height} * .05);
-    left: calc(-#{$logo-height} / 2 + #{$logo-height} * .05);
+    height: calc(#{ $logo-height } / 3);
+    width: calc(#{ $logo-height } * .75);
+    top: calc(#{ $logo-height } / 2 + #{ $logo-height } * .05);
+    left: calc(-#{ $logo-height } / 2 + #{ $logo-height } * .05);
   }
 
   .adidoescode {

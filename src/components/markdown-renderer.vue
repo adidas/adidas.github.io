@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown-document" v-html="document"></div>
+  <div class="markdown" v-html="document"></div>
 </template>
 
 <script>
@@ -54,40 +54,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-  @import '../styles/vars';
-
-  .markdown-document {
-    h3,
-    h4,
-    h5,
-    h6 {
-      border-bottom: 1px solid $primary-silver;
-      padding: .2em 0;
-    }
-
-    hr {
-      border-top: 1px solid $primary-silver;
-    }
-
-    table {
-      margin: 1em auto;
-      width: 100%;
-
-      thead {
-        background-color: $primary-lightgray;
-      }
-
-      th, td {
-        border: 1px solid $primary-silver;
-        padding: .2em .5em;
-      }
-    }
-
-    pre {
-      font-size: .8em;
-      padding: .75em;
-    }
-  }
-</style>

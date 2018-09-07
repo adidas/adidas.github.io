@@ -1,9 +1,7 @@
 <template>
   <div class="kpi">
-    <div class="kpi__title">{{ title }}</div>
-    <div class="kpi__data">
-      {{ value | numberFmt }}
-    </div>
+    <h5 class="kpi__title">{{ title }}</h5>
+    <h4 class="kpi__data">{{ value | numberFmt }}</h4>
   </div>
 </template>
 
@@ -21,17 +19,15 @@ export default {
 <style lang="scss">
   .kpi {
     text-align: center;
-    flex: 1;
+    flex: 1 1 auto;
 
-    .kpi__title {
-      font-size: 1.2em;
+    &__title {
       text-transform: uppercase;
       white-space: nowrap;
     }
 
-    .kpi__data {
-      font-size: 2em;
-      font-weight: bold;
+    &__data {
+      font-weight: bold !important;
     }
   }
 </style>
