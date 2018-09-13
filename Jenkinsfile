@@ -74,7 +74,6 @@ node {
                     credentials: dockerCredentials
                 )
 
-                flows.git.tag repositoryUrl: repo, tag: version, credentials: 'bitbucket-automation', force: true
                 notifications.slack.send message: 'Published'
             }
 
