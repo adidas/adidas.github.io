@@ -45,8 +45,7 @@ module.exports = {
     { src: '~/plugins/lazyload.js', ssr: false }
   ],
   router: {
-    linkExactActiveClass: 'active',
-    scrollBehavior: () => ({ x: 0, y: 0 })
+    linkExactActiveClass: 'active'
   },
   manifest: {
     name: 'adidas developer portal',
