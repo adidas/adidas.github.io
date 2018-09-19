@@ -1,6 +1,6 @@
 <template>
   <div class="document privacy-notice">
-    <markdown-renderer type="url" src="/data/PRIVACY_NOTICE.md"/>
+    <markdown type="url" src="/data/PRIVACY_NOTICE.md"/>
   </div>
 </template>
 

@@ -3,7 +3,7 @@ import headerbar from '../components/headerbar.vue';
 import sidebar from '../components/sidebar.vue';
 import toolbar from '../components/toolbar.vue';
 import footerLinks from '../components/footer-links.vue';
-import markdownRenderer from '../components/markdown-renderer.vue';
+import markdown from '../components/markdown.vue';
 import card from '../components/card.vue';
 
 function register(cmp, name) {
@@ -12,4 +12,4 @@ function register(cmp, name) {
   return register;
 }
 
-register(headerbar)(sidebar)(toolbar)(markdownRenderer)(card)(footerLinks);
+register(headerbar)(sidebar)(toolbar)(markdown)(card)(footerLinks);

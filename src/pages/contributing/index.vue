@@ -1,9 +1,9 @@
 <template>
-  <markdown-page page="contributing"/>
+  <contribution-page page="contributing"/>
 </template>
 
 <script>
-import markdownPage from '@/components/markdown-page.vue';
+import contributionPage from '@/components/contribution-page.vue';
 
 export default {
   layout: 'sidebar',
@@ -11,7 +11,7 @@ export default {
     this.$store.dispatch('hideSidebar');
   },
   components: {
-    markdownPage
+    contributionPage
   }
 };
 </script>

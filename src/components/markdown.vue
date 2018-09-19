@@ -13,7 +13,7 @@ converter.setOption('headerLevelStart', HEADER_LEVEL_START);
 converter.setOption('openLinksInNewWindow', true);
 
 export default {
-  name: 'markdown-renderer',
+  name: 'markdown',
   props: [ 'type', 'src' ],
   data() {
     return {
@@ -54,3 +54,22 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+  @import '../styles/vars';
+
+  .markdown {
+    h1:target:before,
+    h2:target:before,
+    h3:target:before,
+    h4:target:before,
+    h5:target:before,
+    h6:target:before {
+      @media (max-width: $screen-sm) {
+        content: '';
+        display: inline-block;
+        margin-top: 8rem;
+      }
+    }
+  }
+</style>

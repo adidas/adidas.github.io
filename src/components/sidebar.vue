@@ -17,12 +17,13 @@
 
 <script>
 import Vue from 'vue';
-import SidebarList from './sidebar-list.vue';
-
-Vue.component('sidebar-list', SidebarList);
+import sidebarList from './sidebar-list.vue';
 
 export default {
   name: 'sidebar',
+  components: {
+    sidebarList
+  },
   props: [ 'tree' ]
 };
 </script>
