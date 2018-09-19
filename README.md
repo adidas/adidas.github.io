@@ -62,6 +62,11 @@ Runs the site on a server with SSR capabilities. Runs `nuxt build && nuxt start`
 
 Runs `eslint` to check that all the source JS and Vue files are compliant.
 
+## Style and font definitions
+
+This project style is based on [adidas **YARN** Design System][yarn] with some customizations.
+
+adidas is using this project as GitHub page, and the fonts used to deploy it on GitHub do not have public rights. For that reason, this project has been configured to use [_Poppins_][poppins] and [_Roboto_][roboto] as default fonts, however, they can be changed (see [**YARN** documentation][yarn-doc-fonts]).
 
 # Deployment
 
@@ -104,3 +109,7 @@ docker push tools.adidas-group.com:5000/pabb/adidas-github-io
 envsubst < deploy/all.yml > deploy.yml
 kubectl apply -f deploy.yml
 ```
+[poppins]: https://fonts.google.com/specimen/Poppins
+[roboto]: https://fonts.google.com/specimen/Roboto
+[yarn]: https://adidas.github.io/adidas-yarn-design-system/
+[yarn-doc-fonts]: https://github.com/adidas/adidas-yarn-design-system/#font-definitions

@@ -31,7 +31,6 @@
     "@fortawesome/fontawesome-free": "5.2.0",
     "@nuxtjs/pwa": "2.0.8",
     "animate.css": "3.6.1",
-    "branding-resources": "1.9.3",
     "dotenv": "6.0.0",
     "isomorphic-fetch": "2.2.1",
     "js-yaml": "3.11.0",
@@ -63,5 +62,11 @@
     "purgecss": "1.0.1",
     "purgecss-webpack-plugin": "1.2.0",
     "sass-loader": "6.0.7"
+  },
+  "optionalDependencies": {
+    "@adidas/branding-resources": "1.0.0",
+    "typeface-poppins": "0.0.54",
+    "typeface-roboto": "0.0.54",
+    "typeface-roboto-mono": "0.0.54"
   }
 }
