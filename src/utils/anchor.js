@@ -18,7 +18,7 @@ export function linkTo(anchor) {
  * Scrolls to a given element id.
  *
  * @param {string} anchor - id of the element to scroll to
- * @param {string} [behavior='smooth'] - scroll behavior, either smooth, auto or instant.
+ * @param {string} [behavior='smooth'] - scroll behavior ('smooth', 'auto', 'instant').
  */
 export function scrollTo(anchor, behavior = 'smooth') {
   if (anchor && document.querySelector(anchor)) {

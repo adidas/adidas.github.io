@@ -22,13 +22,3 @@ export default {
   name: 'headerbar'
 };
 </script>
-
-<style lang="scss">
-  @import '../styles/vars';
-
-  @media (max-width: 400px) {
-    .yarn .header__headline {
-      font-size: 1rem;
-    }
-  }
-</style>

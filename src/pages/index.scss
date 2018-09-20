@@ -1,6 +1,28 @@
 @import '../styles/vars';
 @import '../styles/mixins';
 
+@media (max-width: 24rem) {
+  html {
+    font-size: .75rem;
+  }
+}
+
+.anchor {
+  cursor: pointer;
+
+  &:hover::after {
+    content: '\e96d';
+    font-family: 'yarn-icon';
+    color: $blue-80;
+    margin-left: $padding-base-horizontal;
+    position: absolute;
+  }
+
+  &.title::after {
+    color: $primary-lightgray;
+  }
+}
+
 .container.home-page {
   .section {
     width: 100%;
@@ -20,22 +42,6 @@
         }
       }
     }
-
-  .anchor {
-    cursor: pointer;
-
-    &:hover::after {
-      content: '\E96D';
-      color: $blue-80;
-      font-family: 'yarn-icon';
-      position: absolute;
-      margin-left: .5rem;
-    }
-  }
-
-  .title.anchor::after {
-    color: $primary-lightgray;
-  }
 
     &.kpis {
       background: linear-gradient(to top, rgba($primary-black, 0) 0%, rgba($primary-black, .50) 100%);
