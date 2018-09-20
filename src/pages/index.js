@@ -5,6 +5,7 @@ import KPI from '~/components/kpi.vue';
 import TechStackBlock from '~/components/tech-stack-block.vue';
 import { getContents } from '~/services/contents';
 import { getOpenSource } from '~/services/open-source';
+import { scrollTo, linkTo } from '../utils/anchor';
 
 export default {
   layout: 'content',
@@ -31,9 +32,23 @@ export default {
       featuredFlag
     }));
   },
+  mounted() {
+    const anchor = this.$router.currentRoute.hash;
+
+    this.scrollTo(anchor, 'auto');
+  },
   methods: {
     sort(list) {
       return list.sort((a, b) => a.sortOrder - b.sortOrder);
+    },
+    toID(text) {
+      return text.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-_]/g, '');
+    },
+    linkTo(anchor) {
+      this.$nextTick(() => linkTo(anchor));
+    },
+    scrollTo(anchor, behavior) {
+      this.$nextTick(() => scrollTo(anchor, behavior));
     }
   },
   computed: {

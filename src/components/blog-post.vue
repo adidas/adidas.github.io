@@ -1,7 +1,7 @@
 <template>
-  <div class="publication">
-    <div class="publication__title">
-      <h4>{{ title }}</h4>
+  <div class="publication" :id="id">
+    <div class="publication__title" @click="$emit('click')">
+      <h4 class="anchor">{{ title }}</h4>
     </div>
     <div class="publication__subtitle" v-if="subtitle">
       <h5>{{ subtitle }}</h5>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  props: [ 'title', 'subtitle', 'summary', 'url', 'urlLabel', 'likes' ]
+  props: [ 'id', 'title', 'subtitle', 'summary', 'url', 'urlLabel', 'likes' ]
 };
 </script>
 
@@ -44,6 +44,10 @@ export default {
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    .publication__title {
+      position: relative;
     }
 
     .publication__separator {
