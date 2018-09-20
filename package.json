@@ -1,6 +1,6 @@
 {
   "name": "adidas-github-io",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "adidas GitHub portal",
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
     "lint:vue": "eslint --ext .vue,.js src",
     "test": "npm run test:unit",
     "test:unit": "jest -c jest.config.js",
-    "doc": "echo \"nothing to doc\"",
     "serve": "nuxt build && nuxt start",
     "serve:static": "http-server ./dist/ -p 3000 -c 31536000 --gzip"
   },
@@ -45,6 +44,7 @@
     "@build-tools/babel-jest": "0.3.1",
     "@build-tools/common": "0.3.1",
     "@build-tools/jest": "0.3.1",
+    "autoprefixer": "8.6.5",
     "babel-eslint": "7.2.3",
     "babel-polyfill": "6.26.0",
     "compression-webpack-plugin": "1.1.11",
@@ -58,7 +58,8 @@
     "eslint-plugin-vue": "4.5.0",
     "glob-all": "3.1.0",
     "http-server": "0.11.1",
-    "node-sass": "4.7.2",
+    "node-sass": "4.9.3",
+    "postcss-loader": "2.1.6",
     "purgecss": "1.0.1",
     "purgecss-webpack-plugin": "1.2.0",
     "sass-loader": "6.0.7"
