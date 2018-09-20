@@ -9,15 +9,14 @@
 </template>
 
 <script>
-import Vue from 'vue';
 import sidebarList from './sidebar-list.vue';
 
 export default {
   name: 'sidebar',
+  props: [ 'tree' ],
   components: {
     sidebarList
-  },
-  props: [ 'tree' ]
+  }
 };
 </script>
 
