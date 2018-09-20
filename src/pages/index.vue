@@ -52,9 +52,9 @@
         </a>
       </div>
     </section>
-    <section class="section tech-stack" id="tech-stack">
+    <section class="section tech-stack">
       <div class="deco">
-        <div class="title">
+        <div class="title anchor" id="tech-stack" @click="linkTo('#tech-stack')">
           {{ $t('views.home.platformTechStack') }}
         </div>
         <div class="separator separator--right"></div>
@@ -67,9 +67,9 @@
         <div v-html="techStackBlock.summary.html"></div>
       </tech-stack-block>
     </section>
-    <section class="section events" id="events">
+    <section class="section events">
       <div class="deco">
-        <div class="title">
+        <div class="title anchor" id="events" @click="linkTo('#events')">
           {{ $t('views.home.events') }}
         </div>
         <div class="separator separator--right"></div>
@@ -85,6 +85,8 @@
       </div>
       <div class="publications">
         <blog-post v-for="(post, index) in events"
+            @click="linkTo(`#${ toID(post.title) }`)"
+            :id="toID(post.title)"
             :key="index"
             :title="post.title"
             :subtitle="post.subtitle"
@@ -94,9 +96,9 @@
             :likes="post.likes"/>
       </div>
     </section>
-    <section class="section careers" id="careers">
+    <section class="section careers">
       <div class="deco">
-        <div class="title">
+        <div class="title anchor" id="careers" @click="linkTo('#careers')">
           {{ $t('views.home.careers') }}
         </div>
         <div class="separator separator--right"></div>
