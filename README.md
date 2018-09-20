@@ -77,7 +77,7 @@ git checkout develop
 npm install
 npm run build
 git add -f ./dist
-git commit -m "UPDATE gh-pages"
+git commit -m "Update gh-pages"
 git subtree split --prefix dist -b gh-pages
 git push -f origin gh-pages:master
 ```
@@ -98,7 +98,7 @@ docker run -dit \
 
 ## Deploy to k8s
 
-- Make sure there is a docker-config secret `tools.adidas-group.com` in the cluster.
+Set up your k8s cluster to deploy the Docker image.
 
 ```
 npm install
