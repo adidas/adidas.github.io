@@ -38,8 +38,7 @@
     "rxjs": "5.5.10",
     "showdown": "1.8.6",
     "vue-i18n": "8.0.0",
-    "vue-lazyload": "1.2.6",
-    "yarn-design-system": "1.0.0"
+    "vue-lazyload": "1.2.6"
   },
   "devDependencies": {
     "autoprefixer": "8.6.5",

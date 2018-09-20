@@ -104,11 +104,12 @@ Set up your k8s cluster to deploy the Docker image.
 npm install
 npm run build
 npm prune --production
-docker build -t tools.adidas-group.com:5000/pabb/adidas-github-io .
-docker push tools.adidas-group.com:5000/pabb/adidas-github-io
+docker build -t IMAGE .
+docker push IMAGE
 envsubst < deploy/all.yml > deploy.yml
 kubectl apply -f deploy.yml
 ```
+
 [poppins]: https://fonts.google.com/specimen/Poppins
 [roboto]: https://fonts.google.com/specimen/Roboto
 [yarn]: https://adidas.github.io/adidas-yarn-design-system/
