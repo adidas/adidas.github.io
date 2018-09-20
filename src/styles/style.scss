@@ -9,10 +9,6 @@
   min-width: $min-width;
 }
 
-html, body {
-  overflow: hidden;
-}
-
 body {
   background-color: #000;
   background-position-x: right;
@@ -47,13 +43,20 @@ body {
     font-weight: normal;
   }
 
+  .toolbar {
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
   .main {
     display: block;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: scrollbar;
 
     .container {
-      background-color: initial;
+      background-color: rgba(#000, 0);
 
       .section {
         border-bottom: none;

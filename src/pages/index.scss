@@ -30,8 +30,8 @@
 
       @media (max-width: $screen-md) {
         background: rgba($primary-black, .75);
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: $padding-small-vertical;
+        padding-bottom: $padding-base-vertical;
         position: relative;
       }
 
@@ -63,7 +63,9 @@
       color: $primary-white;
 
       .grid {
-        grid-template-rows: $grid-item-size;
+        @supports (grid-template-rows: 1px) {
+          grid-template-rows: $grid-item-size;
+        }
 
         .grid-item {
           color: $primary-black;
