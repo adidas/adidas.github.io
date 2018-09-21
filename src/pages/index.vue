@@ -1,7 +1,7 @@
 <template>
   <div class="container home-page">
-    <section class="section header clearfix">
-      <header class="header__title color--white">
+    <section class="section heading clearfix">
+      <header class="heading__title color--white">
         <h2>
           {{ $t('nouns.adidas') }}
           <br/>

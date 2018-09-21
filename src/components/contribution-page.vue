@@ -1,15 +1,15 @@
 <template>
-  <main @scroll="$Lazyload.lazyLoadHandler()" class="content-wrapper">
+  <div @scroll="$Lazyload.lazyLoadHandler()" class="content-wrapper">
     <sidebar :tree="sidebarTree"
         :class="{
           'sidebar--mobile-open': sidebarOpen
         }"/>
     <div class="container">
       <div class="document">
-        <markdown-renderer type="url" :src="src"/>
+        <markdown type="url" :src="src"/>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ import { config } from '@/services/config';
 import { mapGetters } from 'vuex';
 
 export default {
-  name: 'markdown-page',
+  name: 'contribution-page',
   props: {
     page: {
       default: 'contributing'
@@ -45,7 +45,7 @@ export default {
   .content-wrapper {
     background: $primary-white;
     display: flex;
-    min-height: calc(100% - #{$footer-height});
+    min-height: calc(100% - #{ $footer-height });
 
     @media (min-width: $max-width) {
       display: block;
@@ -59,7 +59,7 @@ export default {
         position: absolute;
         background: transparent;
         border: none;
-        margin-left: calc((100% - #{$max-width}) / 2 - 5em);
+        margin-left: calc((100% - #{ $max-width }) / 2 - 5em);
       }
 
       @media (max-width: $screen-md) {

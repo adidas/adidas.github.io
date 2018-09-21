@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown-document" v-html="document"></div>
+  <div class="markdown" v-html="document"></div>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ converter.setOption('headerLevelStart', HEADER_LEVEL_START);
 converter.setOption('openLinksInNewWindow', true);
 
 export default {
-  name: 'markdown-renderer',
+  name: 'markdown',
   props: [ 'type', 'src' ],
   data() {
     return {
@@ -58,36 +58,18 @@ export default {
 <style lang="scss">
   @import '../styles/vars';
 
-  .markdown-document {
-    h3,
-    h4,
-    h5,
-    h6 {
-      border-bottom: 1px solid $primary-silver;
-      padding: .2em 0;
-    }
-
-    hr {
-      border-top: 1px solid $primary-silver;
-    }
-
-    table {
-      margin: 1em auto;
-      width: 100%;
-
-      thead {
-        background-color: $primary-lightgray;
+  .markdown {
+    h1:target:before,
+    h2:target:before,
+    h3:target:before,
+    h4:target:before,
+    h5:target:before,
+    h6:target:before {
+      @media (max-width: $screen-sm) {
+        content: '';
+        display: inline-block;
+        margin-top: 8rem;
       }
-
-      th, td {
-        border: 1px solid $primary-silver;
-        padding: .2em .5em;
-      }
-    }
-
-    pre {
-      font-size: .8em;
-      padding: .75em;
     }
   }
 </style>

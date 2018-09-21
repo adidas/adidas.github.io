@@ -1,279 +1,286 @@
 @import '../styles/vars';
 @import '../styles/mixins';
 
-.home-page {
+@media (max-width: 24rem) {
+  html {
+    font-size: .75rem;
+  }
+}
+
+.anchor {
+  cursor: pointer;
+
+  &:hover::after {
+    content: '\e96d';
+    font-family: 'yarn-icon';
+    color: $blue-80;
+    margin-left: $padding-base-horizontal;
+    position: absolute;
+  }
+
+  &.title::after {
+    color: $primary-lightgray;
+  }
+}
+
+.container.home-page {
   .section {
     width: 100%;
     padding: 3em;
     position: relative;
-  }
 
-  .header {
-    background: linear-gradient(to bottom, rgba($primary-black, 0) 0%, rgba($primary-black, .75) 100%);
+    &.heading {
+      background: linear-gradient(to bottom, rgba($primary-black, 0) 0%, rgba($primary-black, .75) 100%);
 
-    &__title {
-      padding-top: 40vh;
-      margin: auto;
-      max-width: $max-width;
+      .heading__title {
+        padding-top: 40vh;
+        margin: auto;
+        max-width: $max-width;
 
-      @media (max-width: $screen-xs) {
-        padding-top: 15vh;
+        @media (max-width: $screen-xs) {
+          padding-top: 15vh;
+        }
       }
     }
-  }
 
-  .anchor {
-    cursor: pointer;
-
-    &:hover::after {
-      content: '\E96D';
-      color: $blue-80;
-      font-family: 'yarn-icon';
+    &.kpis {
+      background: linear-gradient(to top, rgba($primary-black, 0) 0%, rgba($primary-black, .50) 100%);
+      padding-bottom: 9em;
       position: absolute;
-      margin-left: .5rem;
-    }
-  }
-
-  .title.anchor::after {
-    color: $primary-lightgray;
-  }
-
-  .kpis {
-    background: linear-gradient(to top, rgba($primary-black, 0) 0%, rgba($primary-black, .50) 100%);
-    padding-bottom: 9em;
-    position: absolute;
-    top: 0;
-    @include lg-screen-padding();
-
-    @media (max-width: $screen-md) {
-      background: rgba($primary-black, .75);
-      padding-top: 0;
-      padding-bottom: 0;
-      position: relative;
-    }
-
-    .kpi__list {
-      width: 100%;
-      display: flex;
+      top: 0;
+      @include lg-screen-padding();
 
       @media (max-width: $screen-md) {
-        display: block;
-        height: 100%;
+        background: rgba($primary-black, .75);
+        padding-top: $padding-small-vertical;
+        padding-bottom: $padding-base-vertical;
+        position: relative;
+      }
 
-        .kpi {
-          margin-bottom: 2em;
+      .kpi__list {
+        width: 100%;
+        display: flex;
 
-          &:last-child {
-            margin-bottom: 0;
+        @media (max-width: $screen-md) {
+          display: block;
+          height: 100%;
+
+          .kpi {
+            margin-bottom: 2em;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
       }
     }
-  }
 
-  .open-source,
-  .tech-stack,
-  .blog-posts,
-  .events,
-  .careers,
-  .spacer {
-    background-color: rgba($primary-black, .75);
-    color: $primary-white;
+    &.open-source,
+    &.tech-stack,
+    &.blog-posts,
+    &.events,
+    &.careers {
+      background-color: rgba($primary-black, .75);
+      color: $primary-white;
 
-    .grid {
-      grid-template-rows: $grid-item-size;
-
-      .grid-item {
-        color: $primary-black;
-      }
-    }
-  }
-
-  .open-source {
-    position: relative;
-    padding: 50px 10% 150px;
-
-    @include lg-screen-padding();
-
-    .links {
-      padding: 2em 0;
-      display: flex;
-      flex-direction: row-reverse;
-
-      @media (max-width: $screen-xs) {
-        padding-left: 2em;
-        padding-right: 2em;
-        flex-direction: column-reverse;
-      }
-
-      @media (max-width: $screen-md) {
-        margin: 0 auto;
-      }
-
-      > .btn {
-        margin-right: .5em;
-        display: inline-block !important;
-
-        &:first-child {
-          margin-right: 0;
+      .grid {
+        @supports (grid-template-rows: 1px) {
+          grid-template-rows: $grid-item-size;
         }
 
+        .grid-item {
+          color: $primary-black;
+        }
+      }
+    }
+
+    &.open-source {
+      position: relative;
+      padding: 50px 10% 150px;
+
+      @include lg-screen-padding();
+
+      .links {
+        padding: 2em 0;
+        display: flex;
+        flex-direction: row-reverse;
+
         @media (max-width: $screen-xs) {
-          margin-bottom: 1em;
+          padding-left: 2em;
+          padding-right: 2em;
+          flex-direction: column-reverse;
+        }
+
+        @media (max-width: $screen-md) {
+          margin: 0 auto;
+        }
+
+        > .btn {
+          margin-right: .5em;
+          display: inline-block !important;
+
+          &:first-child {
+            margin-right: 0;
+          }
+
+          @media (max-width: $screen-xs) {
+            margin-bottom: 1em;
+            width: 100%;
+          }
+        }
+
+        .btn.btn-tertiary-dark {
+          background-color: $primary-black;
+          color: $primary-white;
+        }
+
+        .fab.fa-github {
+          font-size: 2em;
+          vertical-align: middle;
+          margin-right: .25em;
+        }
+      }
+
+      .grid {
+        .grid-item--large {
+          @supports (grid-template-rows: 1px) {
+            height: 100%;
+          }
+
+          .tile {
+            border: none;
+            height: 100%;
+          }
+        }
+
+        .grid-item--large .tile__main {
+          height: 100%;
+
+          @media (max-width: $breakpoint-2-col) {
+            height: $grid-item-size;
+          }
+        }
+      }
+    }
+
+    &.tech-stack,
+    &.events,
+    &.blog-posts,
+    &.careers {
+      .title {
+        background-color: $blue-100;
+        color: $primary-white;
+        font-size: 1.5em;
+        font-weight: bold;
+        line-height: 2;
+        text-transform: uppercase;
+        padding: 0 1em;
+        height: 2em;
+        width: 60%;
+        position: absolute;
+        top: -1em;
+        left: 10%;
+        z-index: 1;
+        margin: 0;
+
+        @media (max-width: $screen-md) {
+          text-align: center;
+          height: auto;
+          width: 80%;
+          top: 0;
+          transform: translateY(-50%);
+
+          + .separator {
+            display: none;
+          }
+        }
+
+        @media (min-width: $max-width) {
+          width: 25%;
+          left: 35%;
+        }
+      }
+    }
+
+    &.tech-stack {
+      background-color: rgba($primary-white, .9);
+      padding-bottom: 6.25em;
+      position: relative;
+
+      @include md-screen-padding();
+      @include lg-screen-padding();
+
+      .tech-stack__btn {
+        text-align: center;
+        padding-top: 4em;
+
+        > .btn {
+          background-color: $primary-black;
+        }
+      }
+    }
+
+    &.events {
+      padding-bottom: 9.5em;
+      height: max-content;
+      position: relative;
+
+      .events__video {
+        margin: 0 auto;
+        height: 22em;
+        width: $breakpoint-3-col - 8em;
+
+        @media (max-width: $breakpoint-3-col) {
           width: 100%;
         }
       }
 
-      .btn.btn-tertiary-dark {
-        background-color: $primary-black;
-        color: $primary-white;
+      .deco {
+        margin-bottom: 5em;
       }
 
-      .fab.fa-github {
-        font-size: 2em;
-        vertical-align: middle;
-        margin-right: .25em;
-      }
-    }
+      .publications {
+        padding: 0 20%;
+        margin-top: 5em;
 
-    .grid {
-      .grid-item--large {
-        @supports (grid-template-rows: 1px) {
-          height: 100%;
-        }
-
-        .tile {
-          border: none;
-          height: 100%;
-        }
-      }
-
-      .grid-item--large .tile__main {
-        height: 100%;
-
-        @media (max-width: $breakpoint-2-col) {
-          height: $grid-item-size;
-        }
+        @include md-screen-padding();
+        @include lg-screen-padding($breakpoint-3-col);
       }
     }
-  }
 
-  .tech-stack,
-  .events,
-  .blog-posts,
-  .careers {
-    .title {
-      background-color: $blue-100;
-      color: $primary-white;
-      font-size: 1.5em;
-      font-weight: bold;
-      line-height: 2;
-      text-transform: uppercase;
-      padding: 0 1em;
-      height: 2em;
-      width: 60%;
-      position: absolute;
-      top: -1em;
-      left: 10%;
-      z-index: 1;
-      margin: 0;
+    &.careers {
+      background-color: rgba($primary-gray, .3);
+      position: relative;
 
-      @media (max-width: $screen-md) {
+      @include lg-screen-padding();
+
+      .careers__locations {
+        width: 100%;
+        display: flex;
+
+        @media (max-width: $breakpoint-3-col) {
+          display: block;
+        }
+
+        .careers__location {
+          width: 100%;
+          display: block;
+          flex: 1;
+        }
+      }
+
+      .careers__btn {
         text-align: center;
-        height: auto;
-        width: 80%;
-        top: 0;
-        transform: translateY(-50%);
 
-        + .separator {
-          display: none;
+        > .btn {
+          width: 100%;
         }
       }
 
-      @media (min-width: $max-width) {
-        width: 25%;
-        left: 35%;
+      .deco {
+        margin-bottom: 2em;
       }
-    }
-  }
-
-  .tech-stack {
-    background-color: rgba($primary-white, .9);
-    padding-bottom: 6.25em;
-    position: relative;
-
-    @include md-screen-padding();
-    @include lg-screen-padding();
-
-    .tech-stack__btn {
-      text-align: center;
-      padding-top: 4em;
-
-      > .btn {
-        background-color: $primary-black;
-      }
-    }
-  }
-
-  .events {
-    padding-bottom: 9.5em;
-    height: max-content;
-    position: relative;
-
-    &__video {
-      margin: 0 auto;
-      height: 22em;
-      width: $breakpoint-3-col - 8em;
-
-      @media (max-width: $breakpoint-3-col) {
-        width: 100%;
-      }
-    }
-
-    .deco {
-      margin-bottom: 5em;
-    }
-
-    .publications {
-      padding: 0 20%;
-      margin-top: 5em;
-
-      @include md-screen-padding();
-      @include lg-screen-padding($breakpoint-3-col);
-    }
-  }
-
-  .careers {
-    background-color: rgba($primary-gray, .3);
-    position: relative;
-
-    @include lg-screen-padding();
-
-    &__locations {
-      width: 100%;
-      display: flex;
-
-      @media (max-width: $breakpoint-3-col) {
-        display: block;
-      }
-
-      .careers__location {
-        width: 100%;
-        display: block;
-        flex: 1;
-      }
-    }
-
-    &__btn {
-      text-align: center;
-
-      > .btn {
-        width: 100%;
-      }
-    }
-
-    .deco {
-      margin-bottom: 2em;
     }
   }
 }

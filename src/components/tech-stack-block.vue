@@ -63,7 +63,7 @@ export default {
     }
 
     &__headline {
-      margin-bottom: 1em;
+      margin-bottom: $padding-large-vertical !important;
       text-transform: uppercase;
 
       @media (max-width: $screen-md) {
@@ -81,13 +81,12 @@ export default {
       &__img {
         position: relative;
         flex: 0;
-        flex-basis: 15.5em;
-        width: 15.5em;
+        flex-basis: 15em;
+        width: 15em;
         text-align: center;
 
         @media (max-width: $max-width) {
-          width: 9.5;
-          flex-basis: 9.5;
+          flex-basis: 12em;
         }
 
         @media (max-width: $screen-lg) {
@@ -98,7 +97,8 @@ export default {
 
         > img {
           @include center-vertically();
-          width: 100%;
+          max-width: 100%;
+          max-height: 100%;
           left: 0;
           right: 0;
 
@@ -116,7 +116,7 @@ export default {
         flex: 1;
 
         @media (max-width: $screen-lg) {
-          margin-top: 2em;
+          margin-top: 1.25em;
           margin-left: 0;
           width: 100%;
         }

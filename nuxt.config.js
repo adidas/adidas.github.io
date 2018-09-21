@@ -2,6 +2,8 @@ const config = require('./config/config');
 const routes = require('./config/routes');
 const buildConfig = require('./config/build');
 
+const { FONT = 'public' } = process.env;
+
 module.exports = {
   srcDir: './src',
   build: buildConfig,
@@ -28,19 +30,15 @@ module.exports = {
     }
   },
   css: [
-    './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
-    './node_modules/branding-resources/fonts/adihaus-din.css',
-    './node_modules/branding-resources/fonts/adihaus-din-cond.css',
-    './node_modules/branding-resources/fonts/adineue.css',
-    './node_modules/yarn-design-system/dist/yarn-logo.css',
-    './node_modules/yarn-design-system/dist/yarn-icon.css',
-    './node_modules/yarn-design-system/dist/yarn.css',
+    './node_modules/@adidas/yarn-design-system/dist/yarn-logo.css',
+    './node_modules/@adidas/yarn-design-system/dist/yarn-icon.css',
+    './node_modules/@adidas/yarn-design-system/dist/yarn.css',
+    `~/styles/fonts/${ FONT }.scss`,
     '~/styles/style.scss'
   ],
   plugins: [
     '~/plugins/fetch.js',
-    '~/plugins/bootstrap.js',
     '~/plugins/global-components.js',
     { src: '~/plugins/lazyload.js', ssr: false }
   ],

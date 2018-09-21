@@ -91,7 +91,7 @@ export default {
       }
 
       .link {
-        padding: .25em .5em;
+        padding: $padding-small-vertical $padding-base-horizontal;
       }
 
       .link--careers {
@@ -113,7 +113,6 @@ export default {
       }
 
       &__header {
-        font-family: $font-family-adihaus-din;
         font-weight: bold;
         display: inline-block;
       }

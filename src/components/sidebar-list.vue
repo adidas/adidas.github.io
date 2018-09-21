@@ -1,10 +1,9 @@
 <template>
   <div class="list-group-item list-group-item-light">
-    <span class="label"
-        v-if="!model.name">
+    <span class="label" v-if="!model.name">
       {{ $t(`views.contributing.${model.id}`) }}
     </span>
-    <router-link class="link"
+    <router-link class="link label"
         v-if="model.name"
         :to="localePath({
           name: model.name,

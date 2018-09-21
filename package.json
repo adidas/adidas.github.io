@@ -1,49 +1,56 @@
 {
   "name": "adidas-github-io",
   "version": "1.0.0",
-  "description": "adidas GitHub portal frontend",
+  "description": "adidas GitHub portal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adidas/adidas.github.io.git"
+  },
   "license": "MIT",
+  "contributors": [
+    "David Recuenco <david.recuencogadea@gmail.com>",
+    "Jaime Pastor <moelders@gmail.com>"
+  ],
+  "homepage": "http://adidas.github.io/",
   "main": "nuxt.config.js",
   "scripts": {
-    "setup": "echo \"nothing to build\"",
     "start": "npm run build:dev",
     "build": "cross-env NODE_ENV=production nuxt generate --spa",
     "build:dev": "nuxt",
-    "lint": "eslint --ext .vue,.js src",
+    "lint": "npm run lint:js && npm run lint:vue",
+    "lint:js": "eslint *.js config",
+    "lint:vue": "eslint --ext .vue,.js src",
     "test": "npm run test:unit",
     "test:unit": "jest -c jest.config.js",
-    "doc": "echo \"nothing to doc\"",
     "serve": "nuxt build && nuxt start",
     "serve:static": "http-server ./dist/ -p 3000 -c 31536000 --gzip"
   },
   "dependencies": {
+    "@adidas/yarn-design-system": "1.1.0",
     "@fortawesome/fontawesome-free": "5.2.0",
     "@nuxtjs/pwa": "2.0.8",
     "animate.css": "3.6.1",
-    "bootstrap": "3.3.7",
-    "branding-resources": "1.9.3",
     "dotenv": "6.0.0",
     "isomorphic-fetch": "2.2.1",
-    "jquery": "3.3.1",
     "js-yaml": "3.11.0",
-    "nuxt": "1.4.1",
+    "nuxt": "1.4.2",
     "nuxt-i18n": "4.1.0",
     "rxjs": "5.5.10",
     "showdown": "1.8.6",
     "vue-i18n": "8.0.0",
-    "vue-lazyload": "1.2.6",
-    "yarn-design-system": "1.0.0"
+    "vue-lazyload": "1.2.6"
   },
   "devDependencies": {
+    "autoprefixer": "8.6.5",
     "babel-eslint": "7.2.3",
     "babel-polyfill": "6.26.0",
     "compression-webpack-plugin": "1.1.11",
     "cross-env": "5.2.0",
     "eslint": "4.19.1",
-    "eslint-config-adidas-babel": "1.0.0",
-    "eslint-config-adidas-env": "1.0.0",
-    "eslint-config-adidas-es7": "1.0.0",
-    "eslint-config-adidas-vue": "1.0.0",
+    "eslint-config-adidas-babel": "1.0.1",
+    "eslint-config-adidas-env": "1.0.1",
+    "eslint-config-adidas-es7": "1.0.1",
+    "eslint-config-adidas-vue": "1.0.1",
     "eslint-plugin-import": "2.11.0",
     "eslint-plugin-promise": "3.7.0",
     "eslint-plugin-vue": "4.5.0",
@@ -51,8 +58,15 @@
     "http-server": "0.11.1",
     "jest": "20.0.4",
     "node-sass": "4.9.3",
+    "postcss-loader": "2.1.6",
     "purgecss": "1.0.1",
     "purgecss-webpack-plugin": "1.2.0",
     "sass-loader": "6.0.7"
+  },
+  "optionalDependencies": {
+    "@adidas/branding-resources": "1.0.0",
+    "typeface-poppins": "0.0.54",
+    "typeface-roboto": "0.0.54",
+    "typeface-roboto-mono": "0.0.54"
   }
 }
