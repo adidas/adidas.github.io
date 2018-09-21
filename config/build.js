@@ -41,7 +41,7 @@ module.exports = {
   extractCSS: true,
   plugins: [ new CompressionWebpackPlugin() ],
   extend(config, { isDev }) {
-    if (isDev) {
+    if (!isDev) {
       config.devtool = false;
       config.plugins.push(
         new PurgecssPlugin({
