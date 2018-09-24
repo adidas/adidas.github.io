@@ -35,7 +35,7 @@ export default {
   mounted() {
     const anchor = this.$router.currentRoute.hash;
 
-    this.scrollTo(anchor, 'auto');
+    anchor && this.scrollTo(anchor, 'auto');
   },
   methods: {
     sort(list) {
