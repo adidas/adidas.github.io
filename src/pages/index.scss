@@ -1,12 +1,6 @@
 @import '../styles/vars';
 @import '../styles/mixins';
 
-@media (max-width: 24rem) {
-  html {
-    font-size: .75rem;
-  }
-}
-
 .anchor {
   cursor: pointer;
 
