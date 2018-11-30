@@ -6,9 +6,7 @@
 @import 'fonts';
 
 #__nuxt,
-#__layout,
-.layout,
-.page {
+#__layout {
   height: inherit;
   min-width: $min-width;
 }
@@ -43,17 +41,6 @@ body {
 }
 
 .yarn {
-  h5,
-  h6 {
-    font-weight: 400;
-  }
-
-  .toolbar {
-    @media (min-width: $screen-md) {
-      display: none;
-    }
-  }
-
   .main {
     display: block;
     overflow-y: auto;

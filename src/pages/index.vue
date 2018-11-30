@@ -13,8 +13,7 @@
     </section>
     <section class="section kpis color--primary-white" v-if="orderedKpis.length">
       <div class="kpi__list">
-        <kpi-item class="kpi"
-            v-for="(kpi, index) in orderedKpis"
+        <kpi-item v-for="(kpi, index) in orderedKpis"
             :key="index"
             :title="kpi.title"
             :value="kpi.value"/>
