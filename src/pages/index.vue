@@ -1,7 +1,7 @@
 <template>
   <div class="container home-page">
     <section class="section heading clearfix">
-      <header class="heading__title color--white">
+      <header class="heading__title color--primary-white">
         <h2>
           {{ $t('nouns.adidas') }}
           <br/>
@@ -11,7 +11,7 @@
       </header>
       <adidoescode/>
     </section>
-    <section class="section kpis color--white" v-if="orderedKpis.length">
+    <section class="section kpis color--primary-white" v-if="orderedKpis.length">
       <div class="kpi__list">
         <kpi-item class="kpi"
             v-for="(kpi, index) in orderedKpis"

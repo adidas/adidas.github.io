@@ -43,6 +43,7 @@ export default {
       border: none !important;
       padding-bottom: 0 !important;
       margin: 0 !important;
+      height: 100%;
 
       &.tile--large {
         height: 100%;

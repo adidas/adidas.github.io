@@ -4,7 +4,7 @@
       <div class="header__left">
         <nuxt-link :to="localePath('index')"
             class="header__brand">
-          <span class="header__icon yarn-logo adidas"></span>
+          <span class="header__icon yarn-logo yarn-logo--adidas"></span>
           <span class="header__headline">{{ $t('meta.title') }}</span>
         </nuxt-link>
       </div>
