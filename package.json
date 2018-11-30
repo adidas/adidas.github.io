@@ -42,6 +42,8 @@
     "vue-lazyload": "1.2.6"
   },
   "devDependencies": {
+    "acorn": "6.0.4",
+    "ajv": "6.6.1",
     "autoprefixer": "8.6.5",
     "babel-eslint": "10.0.1",
     "babel-preset-env": "1.7.0",
@@ -50,7 +52,7 @@
     "eslint": "5.9.0",
     "eslint-config-adidas-babel": "1.1.0",
     "eslint-config-adidas-env": "1.1.0",
-    "eslint-config-adidas-es7": "1.1.0",
+    "eslint-config-adidas-es9": "1.1.0",
     "eslint-config-adidas-vue": "1.1.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-promise": "4.0.1",
@@ -66,7 +68,8 @@
     "stylelint": "9.9.0",
     "stylelint-config-adidas": "1.2.0",
     "stylelint-config-adidas-bem": "1.2.0",
-    "stylelint-config-adidas-scss": "1.0.0"
+    "stylelint-config-adidas-scss": "1.0.0",
+    "stylelint-scss": "3.4.0"
   },
   "optionalDependencies": {
     "typeface-poppins": "0.0.54",

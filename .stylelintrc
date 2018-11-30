@@ -1,3 +1,6 @@
 {
-  "extends": "stylelint-config-adidas"
+  "extends": "stylelint-config-adidas",
+  "rules": {
+    "selector-pseudo-element-colon-notation": null
+  }
 }

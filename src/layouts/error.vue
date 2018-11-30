@@ -26,6 +26,7 @@ export default {
 
     .error {
       @include center-vertically();
+
       left: 0;
       right: 0;
       text-align: center;

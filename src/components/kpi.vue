@@ -27,7 +27,7 @@ export default {
     }
 
     &__data {
-      font-weight: bold !important;
+      font-weight: 700 !important;
     }
   }
 </style>

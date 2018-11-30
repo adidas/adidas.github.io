@@ -5,7 +5,10 @@
 @import 'document';
 @import 'fonts';
 
-.layout, .page, #__nuxt, #__layout {
+#__nuxt,
+#__layout,
+.layout,
+.page {
   height: inherit;
   min-width: $min-width;
 }
@@ -18,19 +21,19 @@ body {
   background-attachment: fixed;
 
   @media (max-width: $screen-xs) {
-    background-image: url(/img/background-480x359.jpg);
+    background-image: url('/img/background-480x359.jpg');
   }
 
   @media (min-width: $screen-xs) {
-    background-image: url(/img/background-980x734.jpg);
+    background-image: url('/img/background-980x734.jpg');
   }
 
   @media (min-width: $screen-md) {
-    background-image: url(/img/background-1280x958.jpg);
+    background-image: url('/img/background-1280x958.jpg');
   }
 
   @media (min-width: $screen-lg) {
-    background-image: url(/img/background-3840x2875.jpg);
+    background-image: url('/img/background-3840x2875.jpg');
   }
 }
 
@@ -40,8 +43,9 @@ body {
 }
 
 .yarn {
-  h5, h6 {
-    font-weight: normal;
+  h5,
+  h6 {
+    font-weight: 400;
   }
 
   .toolbar {

@@ -97,6 +97,7 @@ export default {
 
         > img {
           @include center-vertically();
+
           max-width: 100%;
           max-height: 100%;
           left: 0;
@@ -163,9 +164,8 @@ export default {
         width: auto;
         display: flex;
         flex: 0;
-        flex-direction: row;
+        flex-flow: row wrap;
         flex-basis: auto;
-        flex-wrap: wrap;
         justify-content: flex-end;
 
         @media (max-width: $screen-md) {

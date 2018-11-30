@@ -113,7 +113,7 @@ export default {
       }
 
       &__header {
-        font-weight: bold;
+        font-weight: 700;
         display: inline-block;
       }
 
