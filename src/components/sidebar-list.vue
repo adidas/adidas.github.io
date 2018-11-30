@@ -1,5 +1,5 @@
 <template>
-  <div class="list-group-item list-group-item-light">
+  <div class="list-group-item list-group-item-light text-ellipsis">
     <span class="label" v-if="!model.name">
       {{ $t(`views.contributing.${model.id}`) }}
     </span>
