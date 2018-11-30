@@ -64,7 +64,6 @@
     "sass-loader": "6.0.7"
   },
   "optionalDependencies": {
-    "@adidas/branding-resources": "1.0.0",
     "typeface-poppins": "0.0.54",
     "typeface-roboto": "0.0.54",
     "typeface-roboto-mono": "0.0.54"

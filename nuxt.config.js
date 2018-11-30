@@ -2,8 +2,6 @@ const config = require('./config/config');
 const routes = require('./config/routes');
 const buildConfig = require('./config/build');
 
-const { FONT = 'public' } = process.env;
-
 module.exports = {
   srcDir: './src',
   build: buildConfig,
@@ -34,7 +32,6 @@ module.exports = {
     './node_modules/@adidas/yarn-design-system/dist/yarn-logo.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn-icon.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn.css',
-    `~/styles/fonts/${ FONT }.scss`,
     '~/styles/style.scss'
   ],
   plugins: [
