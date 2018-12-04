@@ -25,7 +25,8 @@ const whitelistPatterns = [
   /layout/,
   /active/,
   /yarn/,
-  /markdown/
+  /markdown/,
+  /hljs/
 ];
 
 module.exports = {

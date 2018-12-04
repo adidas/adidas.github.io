@@ -1,7 +1,7 @@
-const showdown = require('showdown');
-const hljs = require('highlight.js');
+import { extension, helper } from 'showdown';
+import { highlightAuto } from 'highlight.js';
 
-showdown.extension('code-highlight', () => {
+extension('code-highlight', () => {
   function htmlUnencode(text) {
     return text
       .replace(/&amp;/g, '&')
@@ -12,7 +12,7 @@ showdown.extension('code-highlight', () => {
   function replace(wholeMatch, match, left, right) {
     const _match = htmlUnencode(match);
 
-    return `${ left }${ hljs.highlightAuto(_match).value }${ right }`;
+    return `${ left }${ highlightAuto(_match).value }${ right }`;
   }
 
   return [
@@ -23,7 +23,8 @@ showdown.extension('code-highlight', () => {
         const right = '</code></pre>';
         const flags = 'g';
 
-        return showdown.helper.replaceRecursiveRegExp(text, replace, left, right, flags);
+        return helper.replaceRecursiveRegExp(text, replace, left, right, flags)
+          .replace(/<pre>/g, '<pre class="hljs">');
       }
     }
   ];
