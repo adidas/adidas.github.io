@@ -21,13 +21,14 @@ export default {
     text-align: center;
     flex: 1 1 auto;
 
-    &__title {
+    & &__title {
       text-transform: uppercase;
       white-space: nowrap;
+      font-weight: 400;
     }
 
-    &__data {
-      font-weight: bold !important;
+    & &__data {
+      font-weight: 700;
     }
   }
 </style>

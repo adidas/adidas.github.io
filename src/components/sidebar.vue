@@ -21,9 +21,20 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../styles/vars';
+
   .sidebar {
     &__main {
+      width: calc(#{$sidebar-width} - #{$sidebar-padding-horizontal * 2});
       position: fixed;
+
+      @media screen and (max-width: $screen-xs-max) {
+        width: calc(100% - #{$sidebar-padding-horizontal * 2});
+      }
+
+      .list-group .list-group-item {
+        width: 100%;
+      }
     }
   }
 </style>

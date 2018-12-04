@@ -45,7 +45,6 @@ export default {
   .content-wrapper {
     background: $primary-white;
     display: flex;
-    min-height: calc(100% - #{ $footer-height });
 
     @media (min-width: $max-width) {
       display: block;

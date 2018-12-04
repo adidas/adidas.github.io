@@ -6,7 +6,7 @@
 import { Converter } from 'showdown';
 
 const HEADER_LEVEL_START = 3;
-const converter = new Converter();
+const converter = new Converter({ extensions: [ 'code-highlight' ] });
 
 converter.setFlavor('github');
 converter.setOption('headerLevelStart', HEADER_LEVEL_START);

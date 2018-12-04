@@ -1,6 +1,6 @@
 # Privacy Notice
 
-> 09.08.2018
+09.08.2018
 
 adidas does not collect or process any personal data while you are interacting with this website.
 This website is hosted by GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.

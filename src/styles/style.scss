@@ -3,33 +3,36 @@
 @import 'grid';
 @import 'separator';
 @import 'document';
+@import 'code';
+@import 'fonts';
 
-.layout, .page, #__nuxt, #__layout {
+#__nuxt,
+#__layout {
   height: inherit;
   min-width: $min-width;
 }
 
 body {
-  background-color: #000;
+  background-color: $background-color;
   background-position-x: right;
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
   @media (max-width: $screen-xs) {
-    background-image: url(/img/background-480x359.jpg);
+    background-image: url('/img/background-480x359.jpg');
   }
 
   @media (min-width: $screen-xs) {
-    background-image: url(/img/background-980x734.jpg);
+    background-image: url('/img/background-980x734.jpg');
   }
 
   @media (min-width: $screen-md) {
-    background-image: url(/img/background-1280x958.jpg);
+    background-image: url('/img/background-1280x958.jpg');
   }
 
   @media (min-width: $screen-lg) {
-    background-image: url(/img/background-3840x2875.jpg);
+    background-image: url('/img/background-3840x2875.jpg');
   }
 }
 
@@ -39,16 +42,6 @@ body {
 }
 
 .yarn {
-  h5, h6 {
-    font-weight: normal;
-  }
-
-  .toolbar {
-    @media (min-width: $screen-md) {
-      display: none;
-    }
-  }
-
   .main {
     display: block;
     overflow-y: auto;
@@ -56,7 +49,7 @@ body {
     -ms-overflow-style: scrollbar;
 
     .container {
-      background-color: rgba(#000, 0);
+      background-color: rgba($background-color, 0);
 
       .section {
         border-bottom: none;

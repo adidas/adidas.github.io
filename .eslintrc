@@ -3,15 +3,13 @@
     "adidas-env/module",
     "adidas-env/node",
     "adidas-env/browser",
-    "adidas-es7",
     "adidas-babel",
-    "adidas-vue"
+    "adidas-vue",
+    "adidas-es9"
   ],
-  "parserOptions": {
-    "ecmaVersion": 8
-  },
   "rules": {
     "require-jsdoc": "off",
-    "prefer-destructuring": "off"
+    "prefer-destructuring": "off",
+    "vue/no-v-html": "off"
   }
 }
