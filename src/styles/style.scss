@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: $background-color;
   background-position-x: right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@ body {
     -ms-overflow-style: scrollbar;
 
     .container {
-      background-color: rgba(#000, 0);
+      background-color: rgba($background-color, 0);
 
       .section {
         border-bottom: none;

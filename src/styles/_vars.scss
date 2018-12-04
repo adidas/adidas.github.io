@@ -1,5 +1,7 @@
 @import '~@adidas/yarn-design-system/src/scss/variables/main';
 
+$background-color: #000;
+
 $min-width: 22em;
 $max-width: 110em;
 
@@ -12,5 +14,3 @@ $breakpoint-3-col: 50em;
 $breakpoint-4-col: 58em;
 
 $sidebar-z-index: 100;
-
-$footer-height: 141px;

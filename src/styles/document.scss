@@ -5,7 +5,6 @@
   background-color: $primary-white;
   text-align: justify;
   padding: 5em 0;
-  min-height: calc(100% - #{$footer-height});
 
   @include md-screen-padding();
   @include lg-screen-padding();
