@@ -42,6 +42,11 @@ module.exports = {
   extractCSS: true,
   plugins: [ new CompressionWebpackPlugin() ],
   extend(config, { isDev }) {
+    config.module.rules.push({
+      test: /\.md$/,
+      loader: 'raw-loader'
+    });
+
     if (!isDev) {
       config.devtool = false;
       config.plugins.push(

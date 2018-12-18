@@ -5,9 +5,7 @@
           'sidebar--mobile-open': sidebarOpen
         }"/>
     <div class="container">
-      <div class="document">
-        <markdown type="url" :src="src"/>
-      </div>
+      <markdown class="document" type="url" :src="src"/>
     </div>
   </div>
 </template>

@@ -3,7 +3,6 @@
 @import 'grid';
 @import 'separator';
 @import 'document';
-@import 'code';
 @import 'fonts';
 
 #__nuxt,
@@ -54,6 +53,12 @@ body {
       .section {
         border-bottom: none;
       }
+    }
+  }
+
+  .markdown {
+    pre {
+      background-color: lighten($primary-lightgray, 5);
     }
   }
 }

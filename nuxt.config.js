@@ -29,6 +29,7 @@ module.exports = {
   },
   css: [
     './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+    './node_modules/highlight.js/styles/github.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn-logo.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn-icon.css',
     './node_modules/@adidas/yarn-design-system/dist/yarn.css',
@@ -36,8 +37,8 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/fetch.js',
-    '~/plugins/markdown.js',
     '~/plugins/global-components.js',
+    '~/plugins/vendor.js',
     { src: '~/plugins/lazyload.js', ssr: false }
   ],
   router: {
