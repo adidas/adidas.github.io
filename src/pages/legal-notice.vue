@@ -1,6 +1,6 @@
 <template>
-  <div class="document legal-notice">
-    <markdown type="url" src="/data/LEGAL_NOTICE.md"/>
+  <div class="legal-notice">
+    <markdown class="document" type="local" src="LEGAL_NOTICE"/>
   </div>
 </template>
 
