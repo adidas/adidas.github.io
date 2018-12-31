@@ -1,4 +1,4 @@
-@Library('global-jenkins-library@2.0.0-beta') _
+@Library('GlobalJenkinsLibrary@2.0') _
 
 env.NODE_VERSION = '8 --lts'
 env.SLACK_TEAM = 'adidas-npm'
