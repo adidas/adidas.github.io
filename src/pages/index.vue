@@ -110,7 +110,7 @@
             target="_blank"
             rel="nofollow noreferrer noopener">
           <card :title="item.title"
-              :image="item.imageUrl"
+              :image="item.imageUrl.secure_url"
               :type="item.location"
               :footer="false"/>
         </a>
