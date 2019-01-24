@@ -20,9 +20,9 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            cpu: 250m
+            cpu: 5m
           limits:
-            cpu: 750m
+            cpu: 25m
       imagePullSecrets:
       - name: tools.adidas-group.com
 ---
