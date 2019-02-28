@@ -22,7 +22,7 @@ spec:
           requests:
             cpu: 1m
           limits:
-            cpu: 2m
+            cpu: 25m
       imagePullSecrets:
       - name: tools.adidas-group.com
 ---
