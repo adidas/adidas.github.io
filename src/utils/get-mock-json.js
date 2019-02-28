@@ -1,12 +1,14 @@
+import axios from 'axios';
+
 export async function getMockJson(fileName, isServer) {
   let data;
 
   if (isServer) {
     data = require(`../static/data/${ fileName }`);
   } else {
-    const response = await fetch(`/data/${ fileName }`);
+    const response = await axios.get(`/data/${ fileName }`);
 
-    data = await response.json();
+    data = response.data;
   }
 
   return data;

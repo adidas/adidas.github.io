@@ -1,11 +1,5 @@
 {
   "presets": [
-    [ "vue-app", { "useBuildIns": true }],
-    [ "env", { "targets": { "browsers": [ "ie 10" ] } }]
-  ],
-  "env": {
-    "test": {
-      "plugins": [ "istanbul" ]
-    }
-  }
+    [ "@babel/env", { "targets": { "browsers": [ "ie 10" ] } }]
+  ]
 }

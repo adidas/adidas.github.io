@@ -1,7 +1,7 @@
 import { config, defaultHeaders } from '@/services/config';
 import { load } from 'js-yaml';
 import { Observable } from 'rxjs';
-import { asJson, fetch } from '../utils/rxjs';
+import { fetch } from '../utils/rxjs';
 
 export function getGitHubRepositories() {
   return new Promise((resolve, reject) => {
@@ -43,10 +43,10 @@ export function getGitHubRepositories() {
 
 function getReposPage(cursor) {
   return fetch(`${ config.api.host }/repositories${ cursor ? `?after=${ cursor }` : '' }`, {
-    headers: { ...defaultHeaders }
+    headers: { ...defaultHeaders },
+    responseType: 'json'
   })
-  .flatMap(asJson)
-  .map((data) => {
+  .map(({ data }) => {
     if (data.errors) {
       throw data;
     }

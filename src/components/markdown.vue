@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'markdown',
   props: [ 'type', 'src' ],
@@ -16,7 +18,7 @@ export default {
 
     switch (this.type) {
     case 'url':
-      promise = fetch(this.src).then((data) => data.text());
+      promise = axios(this.src, { responseType: 'text' }).then(({ data }) => data);
       break;
     case 'local':
     default:
