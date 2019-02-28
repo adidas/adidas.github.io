@@ -30,17 +30,14 @@ const whitelistPatterns = [
 ];
 
 module.exports = {
-  vendor: [
-    'babel-polyfill',
-    'isomorphic-fetch',
-    'showdown',
-    '@fortawesome/fontawesome-free',
-    'rxjs',
-    'vue-lazyload',
-    'js-yaml'
-  ],
   extractCSS: true,
   plugins: [ new CompressionWebpackPlugin() ],
+  html: {
+    minify: {
+      collapseWhitespace: true,
+      conservativeCollapse: true
+    }
+  },
   extend(config, { isDev }) {
     config.module.rules.push({
       test: /\.md$/,

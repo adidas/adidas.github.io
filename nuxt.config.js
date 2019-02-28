@@ -36,7 +36,6 @@ module.exports = {
     '~/styles/style.scss'
   ],
   plugins: [
-    '~/plugins/fetch.js',
     '~/plugins/global-components.js',
     '~/plugins/vendor.js',
     { src: '~/plugins/lazyload.js', ssr: false }
@@ -50,11 +49,7 @@ module.exports = {
     description: 'All you need to know to create.'
   },
   generate: {
-    routes: config.contributing.routes.map(({ path }) => path),
-    minify: {
-      collapseWhitespace: true,
-      conservativeCollapse: true
-    }
+    routes: config.contributing.routes.map(({ path }) => path)
   },
   env: {
     routes,

@@ -1,23 +1,27 @@
+import axios from 'axios';
 import { config } from '@/services/config';
 import { defaultHeaders } from './config';
 
 export function getContents() {
-  return fetch(`${ config.api.host }/content`, {
-    headers: { ...defaultHeaders }
+  return axios.get(`${ config.api.host }/content`, {
+    headers: { ...defaultHeaders },
+    responseType: 'json'
   })
-  .then((res) => res.json());
+  .then(({ data }) => data);
 }
 
 export function getProjects() {
-  return fetch(`${ config.api.host }/content/projects`, {
-    headers: { ...defaultHeaders }
+  return axios.get(`${ config.api.host }/content/projects`, {
+    headers: { ...defaultHeaders },
+    responseType: 'json'
   })
-  .then((res) => res.json());
+  .then(({ data }) => data);
 }
 
 export function loadTranslation(lang) {
-  return fetch(`${ config.api.host }/content/lang/${ lang }`, {
-    headers: { ...defaultHeaders }
+  return axios.get(`${ config.api.host }/content/lang/${ lang }`, {
+    headers: { ...defaultHeaders },
+    responseType: 'json'
   })
-  .then((res) => res.json());
+  .then(({ data }) => data);
 }

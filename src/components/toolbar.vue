@@ -1,6 +1,6 @@
 <template>
   <div class="toolbar">
-    <button class="btn btn-primary btn-square"
+    <button class="btn btn-primary btn-square toolbar__sidebar-toggle"
         @click="toggleSidebar()">
       <span class="yarn-icon dark--active"
           :class="{
@@ -23,3 +23,15 @@ export default {
   methods: mapActions([ 'toggleSidebar' ])
 };
 </script>
+
+<style lang="scss">
+  @import '../styles/vars';
+
+  .toolbar {
+    @media (min-width: $screen-sm) {
+      .toolbar__sidebar-toggle {
+        display: none;
+      }
+    }
+  }
+</style>

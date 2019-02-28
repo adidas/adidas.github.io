@@ -2,6 +2,7 @@
 @import 'mixins';
 
 .document {
+  min-height: 80vh;
   background-color: $primary-white;
   text-align: justify;
   padding: 5em 0;

@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Observable } from 'rxjs';
 import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/of';
@@ -13,7 +14,7 @@ import 'rxjs/add/operator/catch';
  */
 export function fetch(url, options) {
   return Observable.create((observer) => {
-    global.fetch(url, options)
+    axios(url, options)
     .then((res) => {
       observer.next(res);
       observer.complete();
