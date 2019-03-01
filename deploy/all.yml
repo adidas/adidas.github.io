@@ -20,9 +20,25 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            cpu: 1m
+            cpu: 10m
           limits:
-            cpu: 25m
+            cpu: 1000m
+        livenessProbe:
+          httpGet:
+            path: /nginx_status
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          failureThreshold: 10
+        readinessProbe:
+          httpGet:
+            path: /nginx_status
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          failureThreshold: 10
       imagePullSecrets:
       - name: tools.adidas-group.com
 ---
