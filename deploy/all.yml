@@ -21,8 +21,10 @@ spec:
         resources:
           requests:
             cpu: 10m
+            memory: 64Mi
           limits:
             cpu: 1000m
+            memory: 256Mi
         livenessProbe:
           httpGet:
             path: /nginx_status
