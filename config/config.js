@@ -13,6 +13,12 @@ const contributingPages = {
     path: '/contributing/terms-and-conditions',
     file: 'Terms-and-conditions.md'
   },
+  'java-coding-guidelines': {
+    id: 'java-coding-guidelines',
+    name: 'contributing-document',
+    path: '/contributing/java-coding-guidelines',
+    file: 'Java-coding-guidelines.md'
+  },
   'css-coding-guidelines': {
     id: 'css-coding-guidelines',
     name: 'contributing-document',
@@ -41,10 +47,11 @@ const contributingPages = {
 const contributingRoutes = [
   contributingPages.contributing,
   contributingPages['terms-and-conditions'],
-  contributingPages['css-coding-guidelines'],
-  contributingPages['html-coding-guidelines'],
+  contributingPages['java-coding-guidelines'],
   contributingPages['javascript-coding-guidelines'],
-  contributingPages['typescript-coding-guidelines']
+  contributingPages['typescript-coding-guidelines'],
+  contributingPages['css-coding-guidelines'],
+  contributingPages['html-coding-guidelines']
 ]
 .map((route) => {
   const { id, name, path } = route;
@@ -61,10 +68,11 @@ const contributingSidebarTree = [
   {
     id: 'coding-style-guidelines',
     children: [
-      contributingPages['css-coding-guidelines'],
-      contributingPages['html-coding-guidelines'],
+      contributingPages['java-coding-guidelines'],
       contributingPages['javascript-coding-guidelines'],
-      contributingPages['typescript-coding-guidelines']
+      contributingPages['typescript-coding-guidelines'],
+      contributingPages['css-coding-guidelines'],
+      contributingPages['html-coding-guidelines']
     ]
     .map((tree) => {
       const { id, name, children } = tree;
