@@ -30,7 +30,7 @@
     "@adidas/yarn-design-system": "1.5.0",
     "@fortawesome/fontawesome-free": "5.5.0",
     "@nuxtjs/pwa": "2.4.0",
-    "acorn": "6.1.1",
+    "acorn": "6.4.1",
     "acorn-dynamic-import": "4.0.0",
     "ajv": "6.9.1",
     "animate.css": "3.6.1",
