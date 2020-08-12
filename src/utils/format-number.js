@@ -1,3 +1,3 @@
 export function formatNumber(value) {
-  return new Intl.NumberFormat().format(value);
+  return new Intl.NumberFormat(navigator.language).format(value);
 }
