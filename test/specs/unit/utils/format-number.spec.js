@@ -25,9 +25,9 @@ describe('formatNumber()', () => {
     expect(formatNumber(714536543843049314)).toMatch(/^714\,/);
   });
 
-  it('should keep decimals as-is', () => {
+  it('should keep 3 decimal positions rounded', () => {
     expect(formatNumber(245512.1231)).toMatch(/.123$/);
     expect(formatNumber(354316542.2)).toMatch(/.2$/);
-    expect(formatNumber(43049314.54363213)).toMatch(/.543$/);
+    expect(formatNumber(43049314.54363213)).toMatch(/.544$/);
   });
 });
