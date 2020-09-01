@@ -21,8 +21,7 @@
     "lint:js": "eslint *.js config",
     "lint:vue": "eslint --ext .vue,.js src",
     "lint:style": "stylelint src/**/*.{scss,vue}",
-    "test": "npm run test:unit",
-    "test:unit": "jest -c jest.config.js",
+    "test": "echo \"No tests!\"",
     "serve": "nuxt build && nuxt start",
     "serve:static": "http-server ./dist/ -p 3000 -c 31536000 --gzip"
   },
@@ -50,7 +49,6 @@
     "eslint-plugin-vue": "5.0.0",
     "glob-all": "3.1.0",
     "http-server": "0.11.1",
-    "jest": "24.1.0",
     "js-yaml": "3.11.0",
     "node-sass": "4.9.3",
     "nuxt": "2.4.5",
