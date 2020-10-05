@@ -88,7 +88,7 @@ const contributingSidebarTree = [
 
 module.exports = {
   api: {
-    host: process.env.API_HOST || 'https://api.adidas.com/github',
+    host: process.env.API_HOST || 'https://github.api.adidas.com',
     key: process.env.API_KEY || 'xy3jxpv3cvc8skw85mjgvxdu'
   },
   contributing: {
