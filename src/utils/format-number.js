@@ -1,3 +1,5 @@
 export function formatNumber(value) {
-  return new Intl.NumberFormat(navigator.language).format(value);
+  const lang = process.browser ? navigator.language : 'en';
+
+  return new Intl.NumberFormat(lang).format(value);
 }
