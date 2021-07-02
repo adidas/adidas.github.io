@@ -1,0 +1,179 @@
+[
+  {
+    "id": 0,
+    "name": "amdf",
+    "description": "Advanced Material Data Format",
+    "url": "https://github.com/adidas/amdf",
+    "stars": {
+      "totalCount": 3
+    },
+    "watchers": {
+      "totalCount": 4
+    },
+    "forks": {
+      "totalCount": 0
+    },
+    "createdAt": "2017-12-15T12:00:00Z",
+    "updatedAt": "2018-03-15T12:00:00Z",
+    "config": {
+      "imageUrl": "/img/repo/amdf.jpg",
+      "display":  {
+        "watchers": true
+      },
+      "keywords": [
+        "doc"
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "name": "js-linter-configs",
+    "description": "Configurations for JavaScript linting tools",
+    "url": "https://tools.adidas-group.com/bitbucket/projects/BWRNPM/repos/pea-linter-configs/browse",
+    "stars": {
+      "totalCount": 35
+    },
+    "watchers": {
+      "totalCount": 0
+    },
+    "forks": {
+      "totalCount": 0
+    },
+    "createdAt": "2017-12-15T12:00:00Z",
+    "updatedAt": "2018-03-15T12:00:00Z",
+    "language": {
+      "name": "JavaScript"
+    },
+    "config": {
+      "imageUrl": "/img/repo/js-linter-configs.png",
+      "display": {
+        "title": "JavaScript linter configs",
+        "language": true,
+        "stars": true
+      },
+      "keywords": [
+        "eslint",
+        "tslint",
+        "stylelint",
+        "linter",
+        "shareable-configs",
+        "configuration",
+        "ecmascript",
+        "typescript",
+        "javascript"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "yarn-design-system",
+    "description": "adidas Design System repository lorem ipsum dolor sit amet asdfgdsafdsa",
+    "url": "https://github.com/adidas/yarn-design-system",
+    "stars": {
+      "totalCount": 1342
+    },
+    "watchers": {
+      "totalCount": 3841
+    },
+    "forks": {
+      "totalCount": 289
+    },
+    "createdAt": "2018-03-15T12:00:00Z",
+    "updatedAt": "2018-03-15T12:00:00Z",
+    "language": {
+      "name": "Sass"
+    },
+    "config": {
+      "imageUrl": "/img/repo/yarn-logo.png",
+      "backgroundColor": "black",
+      "display": {
+        "stars": true,
+        "forks": true,
+        "language": true
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "mashery-toolbelt",
+    "description": "CLI tool for Mashery API Management provisioning",
+    "url": "https://github.com/adidas-group/mashery-toolbelt",
+    "stars": {
+      "totalCount": 5
+    },
+    "watchers": {
+      "totalCount": 6
+    },
+    "forks": {
+      "totalCount": 5
+    },
+    "createdAt": "2018-03-15T12:00:00Z",
+    "updatedAt": "2018-03-15T12:00:00Z",
+    "language": {
+      "name": "JavaScript"
+    },
+    "config": {
+      "imageUrl": "/img/repo/github.png",
+      "backgroundColor": "black",
+      "display": {
+        "stars": true,
+        "forks": true,
+        "language": true
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "templar",
+    "description": "Developer friendly email development with React",
+    "url": "https://tools.adidas-group.com/bitbucket/projects/CEA/repos/htmplar/browse",
+    "stars": {
+      "totalCount": 0
+    },
+    "watchers": {
+      "totalCount": 0
+    },
+    "forks": {
+      "totalCount": 0
+    },
+    "createdAt": "2018-03-15T12:00:00Z",
+    "updatedAt": "2018-03-15T12:00:00Z",
+    "language": {
+      "name": "JavaScript"
+    },
+    "config": {
+      "imageUrl": "/img/repo/templar.png",
+      "backgroundColor": "gray",
+      "display": {
+        "language": true
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "github-portal",
+    "description": "adidas GitHub Portal",
+    "url": "https://tools.adidas-group.com/bitbucket/projects/PABB/repos/adidas-github-io/browse",
+    "stars": {
+      "totalCount": 0
+    },
+    "watchers": {
+      "totalCount": 0
+    },
+    "forks": {
+      "totalCount": 0
+    },
+    "createdAt": "2018-03-15T12:00:00Z",
+    "updatedAt": "2018-03-15T12:00:00Z",
+    "language": {
+      "name": "JavaScript"
+    },
+    "config": {
+      "imageUrl": "/img/repo/github-portal.png",
+      "backgroundColor": "black",
+      "display": {
+        "language": true
+      }
+    }
+  }
+]
