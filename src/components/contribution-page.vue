@@ -56,7 +56,7 @@ export default {
         position: absolute;
         background: transparent;
         border: none;
-        margin-left: calc((100% - #{ $max-width }) / 2 - 5em);
+        margin-left: calc((100% - #{ $max-width }) / 2);
       }
 
       @media (max-width: $screen-md) {
