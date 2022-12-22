@@ -88,8 +88,8 @@ const contributingSidebarTree = [
 
 module.exports = {
   api: {
-    host: process.env.API_HOST || 'https://github.api.adidas.com',
-    key: process.env.API_KEY || 'xy3jxpv3cvc8skw85mjgvxdu'
+    host: process.env.API_HOST || 'https://adidas-github-portal.api.3stripes.io',
+    key: process.env.API_KEY || 'hODACHt5DyTOXTzPZKHoVJC8i01lCKqz'
   },
   contributing: {
     baseUrl: 'https://raw.githubusercontent.com/wiki/adidas/adidas-contribution-guidelines',
